@@ -32,3 +32,80 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+## TypeScript with Next.js
+
+Check out this [Next.js Basic Features: TypeScript](https://nextjs.org/docs/basic-features/typescript) for more details.
+
+<!--
+PARA ACESSAR AS PROPRIEDADES DE COMPONENTES
+
+export default function Button(props) {
+	return (
+	<button>{props.title}</button>
+	)
+}
+
+import Button from ".Button";
+
+function App() {
+    return (
+        <>
+        <Button title=" Button 1" />
+        </>
+    )
+}
+
+--------------------------------------------
+
+PARA ACESSAR O CHILDREN DE COMPONENTES
+
+export default function Button(props) {
+	return (
+	<button>{props.children}</button>
+	)
+}
+
+import Button from ".Button";
+
+function App() {
+    return (
+        <>
+        <Button>Button 1</Button>
+        </>
+    )
+}
+
+--------------------------------------------
+
+CONCEITO DE ESTADO NO REACT: É UMA FORMA DE MANIPULAR INFORMAÇÕES DE DENTRO DE UM COMPONENTE
+
+import { useState } from 'react';
+
+export default function Button(props) {
+
+	const [counter, setCounter] = useState(1);
+	
+	function increment() {
+	setCounter(counter + 1);
+}	
+
+	return (
+	<>
+	span>{counter}</span>
+	<button onClick={increment}>{props.children}</button>
+	<br />
+	</>
+	)
+}
+
+import Button from ".Button";
+
+function App() {
+    return (
+        <>
+        <Button>Button 1</Button>
+        </>
+    )
+}
+-->
