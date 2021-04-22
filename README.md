@@ -37,6 +37,30 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 
 Check out this [Next.js Basic Features: TypeScript](https://nextjs.org/docs/basic-features/typescript) for more details.
 
+npm install --save-dev typescript @types/react @types/node
+
+convert all files js to tsx files and run >>> npm run dev
+
+tsx = typescript + jsx (xml no javascript)
+
+## Sass with Next.js
+
+Check out this [Sass: Install Sass](https://sass-lang.com/install) for more details.
+
+npm install sass
+
+## date-fns - modern JavaScript date utility library
+
+Check out this [install date-fns](https://date-fns.org/docs/Getting-Started) for more details.
+
+npm install date-fns --save
+
+## Json Server
+
+Check out this [install Json Server](https://github.com/typicode/json-server) for more details.
+
+npm install json-server --save-dev
+
 <!--
 PARA ACESSAR AS PROPRIEDADES DE COMPONENTES
 

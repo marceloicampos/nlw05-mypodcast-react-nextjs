@@ -1,8 +1,73 @@
-export default function Home() {
+export default function Home(props) {
   return (
-    <h1>Hello World</h1>
+    <div>
+      <h1>Index</h1>
+      <p>{JSON.stringify(props.episodes)}</p>
+    </div>
   )
 }
+
+export async function getStaticProps() {
+    const response = await fetch('http://localhost:3333/episodes')
+    const data = await response.json()
+
+    return {
+      props: {
+        episodes: data,
+      },
+      revalidate: 60 * 60 * 8,
+    }
+}
+
+// SSG ou static site generator onde há criação de páginas estáticas de tempos em tempo de acordo com o tempo estipulado no revalidate. Nota: só há ssg em produção, por isso precisamos criar uma build dentro do desenvolvimento
+
+/* SSR - Server Side Render só tem 1 problema, toda vez que acessamos a aplicação acessamos também o servidor
+
+export default function Home(props) {
+  console.log(props.episodes)
+  return (
+    <div>
+      <h1>Index</h1>
+      <p>{JSON.stringify(props.episodes)}</p>
+    </div>
+  )
+}
+
+export async function getServerSideProps() {
+    const response = await fetch('http://localhost:3333/episodes')
+    const data = await response.json()
+
+    return {
+      props: {
+        episodes: data,
+      }
+    }
+}
+
+SSR */
+
+/* SPA - o modelo SPA não é amigável com dados de SEO
+import { useEffect } from "react" 
+useEffect() 
+essa função dispara algo sempre algo mudar na aplicação, quando algo mudar eu quero que algo aconteça
+useEffect(() => {}, [])
+useEffect((o que eu quero executar) => {}, [quando eu quero executar passando variáveis dentro desse array])
+
+import { useEffect } from "react"
+
+export default function Home() {
+
+  useEffect(() => {
+    fetch('http://localhost:3333/episodes')
+    .then(response => response.json())
+    .then(data => console.log(data))
+}, [])
+
+  return (
+    <h1>Index</h1>
+  )
+}
+SPA */
 
 /*
 import Head from 'next/head'

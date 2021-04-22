@@ -2,9 +2,6 @@
 
 # trash
 /.vscode/
-/styles/trash
-/public/trash
-/pages/trash
 
 # dependencies
 /node_modules
