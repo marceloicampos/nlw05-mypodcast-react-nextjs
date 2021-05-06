@@ -41,7 +41,9 @@ npm install --save-dev typescript @types/react @types/node
 
 convert all files js to tsx files and run >>> npm run dev
 
-tsx = typescript + jsx (xml no javascript)
+tsx = typescript + jsx or xml on javascript
+
+note: typescript runs only on dev mode on build mode is javascript
 
 ## Sass with Next.js
 
@@ -60,6 +62,22 @@ npm install date-fns --save
 Check out this [install Json Server](https://github.com/typicode/json-server) for more details.
 
 npm install json-server --save-dev
+
+## Axios
+
+Check out this [Axios - Npm](https://www.npmjs.com/package/axios) for more details.
+
+To do requests http with others functions more then fetch like set the base url that will repeat all time on the application
+
+npm install axios
+
+<!--
+Aula 01 - lit off
+Aula 02 - maximum speed
+Aula 03 - in orbit
+Aula 04 - landing
+Aula 05 - surface exploration
+-->
 
 <!--
 PARA ACESSAR AS PROPRIEDADES DE COMPONENTES
